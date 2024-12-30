@@ -1,0 +1,51 @@
+/* Base styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #007bff; /* Default blue */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+/* Active state */
+.btn:active {
+  background-color: #003f7f; /* Even darker blue */
+}
+
+/* Disabled state */
+.btn:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+/* Primary style */
+.btn-primary {
+  background-color: #007bff;
+}
+
+/* Secondary style */
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+/* Size modifiers */
+.btn-small {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.btn-large {
+  padding: 15px 30px;
+  font-size: 18px;
+}
