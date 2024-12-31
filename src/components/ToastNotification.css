@@ -1,0 +1,39 @@
+.toast-notification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    margin: 8px 0;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    animation: fadeIn 0.3s ease-out, fadeOut 0.3s ease-in forwards;
+  }
+  
+  .toast-notification-success {
+    background-color: #28a745;
+  }
+  
+  .toast-notification-error {
+    background-color: #dc3545;
+  }
+  
+  .toast-notification-info {
+    background-color: #007bff;
+  }
+  
+  .toast-notification-warning {
+    background-color: #ffc107;
+  }
+  
+  .toast-notification-close {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  
