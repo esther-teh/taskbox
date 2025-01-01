@@ -3,18 +3,28 @@ import PropTypes from 'prop-types';
 import './ToastNotification.css';
 
 const ToastNotification = ({ message, type = 'info', onClose, duration = 60000 }) => {
-  React.useEffect(() => {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleShowToast = () => {
+    setShowToast(true);
+  };
+
+  const handleCloseToast = () => {
+    setShowToast(false);
+  };
+
+  useEffect(() => {
     let timer;
 
-    if (duration > 0) {
+    if (showToast && duration > 0) {
       // Set a timeout for duration
       timer = setTimeout(() => {
-        onClose();
+        handleCloseToast();
       }, duration);
     }
 
     return () => clearTimeout(timer); // Clear timeout when component unmounts
-  }, [duration, onClose]);
+  }, [showToast, duration]);
 
   return (
     <div className={`toast-notification toast-notification-${type}`}>
